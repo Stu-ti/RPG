@@ -31,3 +31,16 @@ updated - date the file was submitted
 updated - description of the game
 fixed - formatting errors
 fixed - items so player cannot pick up the same item twice
+
+v3.0
+Name: RPG_Modules
+added - a variety of modules to hold different aspects of the game
+added - a way to read a printed text file in the output
+added - docstrings for each module
+fixed - formatting errors
+fixed - errors in the code
+updated - change log
+updated - version history
+updated - file name
+updated - date the file was submitted
+updated - comments on the main program
