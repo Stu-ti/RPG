@@ -1,9 +1,9 @@
 ###############################################################################
-#RPG_Modules
+#Stuti_Home_Adventure
 #CS 30
 #May 10, 2023
 #Stuti Sapru
-#Version 003
+#Version 004
 ###############################################################################
 '''
 A simple game using a map and items in the rooms of the map

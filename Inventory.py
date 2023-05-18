@@ -6,10 +6,7 @@ if they already had that particular item in their inventory. If they did, the
 item is not added to their inventory again. Laastly, it prints out all the 
 items the user had in their inventory.
 '''
-#this calls the module that contains all the rooms and the respective items 
-#found in them
-import Map_Items
-#this calls the module that contains the map (in the form of a list)
+#this calls the module that contains the map, its items and descriptions
 import Map
 #this calls the module that controls the user's movement and tracks their 
 #location
@@ -29,16 +26,16 @@ def get_items():
     #this line of code calls the variable we defined previously
     global inventory
     #this loop prints the item of the room the user went into
-    for room in Map_Items.map_items:
+    for room in Map.map_items:
         if room == Map.map[Movement.row][Movement.column]:
-            for item in Map_Items.map_items[room]:
-                print(f"\nYou found {Map_Items.map_items[room][item]}\n")
+            for item in Map.map_items[room]:
+                print(f"\nYou found {Map.map_items[room][item]}\n")
                 #this loop adds the item to the user's inventory. If the
                 #inventory already has the item, the item is not readded.
-                if Map_Items.map_items[room][item] in inventory:
+                if Map.map_items[room][item] in inventory:
                     print("You already have this in your inventory\n")
                 else:
-                    inventory.append(Map_Items.map_items[room][item])
+                    inventory.append(Map.map_items[room][item])
     #this loop prints all the items of the inventory for the user. If the user 
     #has no items in their inventory, the loop prints the same to let the user 
     #know

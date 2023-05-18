@@ -44,3 +44,12 @@ updated - version history
 updated - file name
 updated - date the file was submitted
 updated - comments on the main program
+
+v4.0
+Name: Stuti_Home_Adventure
+removed - modules containing the map rooms and map items
+updated - map module to have the map's items and descriptions as well
+updated - change log
+updated - version history
+updated - file name
+updated - date the file was submitted
