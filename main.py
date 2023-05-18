@@ -3,7 +3,7 @@
 #CS 30
 #March 20, 2023
 #Stuti Sapru
-#Version 001
+#Version 002
 ###############################################################################
 '''
 A simple game using a map
