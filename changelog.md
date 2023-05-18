@@ -53,3 +53,17 @@ updated - change log
 updated - version history
 updated - file name
 updated - date the file was submitted
+
+v5.0
+Name: Stuti_Home_Adventure
+added - try-except-else-finally code
+added - input function
+added - external file handling
+added - more comments for a clearer code
+fixed - formatting errors
+fixed - errors in the code
+updated - change log
+updated - version history
+updated - file name
+updated - date the file was submitted
+updated - comments on the main program
