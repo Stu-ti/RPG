@@ -4,6 +4,9 @@ dictionaries that have the items of the rooms and their descriptions. This
 module is used to track the location of the user in respect to their position 
 on the map.
 '''
+#this helps format the map when it is written to
+from tabulate import tabulate
+
 #This is a list of all the rooms
 map = [['closet', 'office', 'washroom', 'sauna'],
        ['entrance', 'foyer', 'stairs', 'bedroom1'],
@@ -84,7 +87,7 @@ map_items = {
     'Item': 'Hot Rock'
   },
   'entrance': {
-    'Item': 'Slippers'
+    'Item': 'Hot Rock'
   },
   'foyer': {
     'Item': 'Family Picture'
@@ -127,24 +130,41 @@ def question():
     ask = input("Do you want to see the map? ")
 
     if ask == "Yes":
-        #this prints out the text file of the map that the user can view at 
-        #the start of the game incase of no error
-        try:
-            with open("Maps.txt", "r") as file:
-                print(file.read())
-        except:
-            #The statement below prints if there is an error in printing the 
+        #this asks if the user is ready to accept conditions (extra layer of user input)
+        add = input("Are you ready to accept all the information that comes with looking at the map? ")
+        #if the user decides that they want to see the map and accept all terms and 
+        #conditions
+        if add == "Yes":
+            #runs if there is nopthing wrong with the code
+            try:
+                #writes the map to an external file
+                with open("Maps.txt", "w") as file:
+                    file.write(tabulate(map, tablefmt="grid"))
+            #The statement below prints if there is an error in printing the
             #module that contains the text version of the map
-            print("There is no available map of the house right now. Please "
-                  "contact the game developer and let them know. You will have"
-                  " to play the game without a map. Apologies for the "
-                  "inconvinience.")
+            except:
+                print("There is no available map of the house right now. Please "
+                      "contact the game developer and let them know. You will have"
+                      " to play the game without a map. Apologies for the "
+                      "inconvinience.")
+            #this is further printed if the code does not have an error
+            else:
+                with open("Maps.txt", "r") as file:
+                    print(file.read())
+            #this prints no matter if something is wrong with the file or not
+            finally:
+                print("You can view it later in the game as well!")
+        #this prints if the user does not accept the terms and conditions
+        elif add == "No":
+            print("\nOkay! You can choose to view it later!")
+        #the following statement prints if the user types an invalid input
         else:
-            print("\nAbove is the map of the house.")
-        finally:
-            print("It's just a house!")
+            print("\nPlease print out either 'Yes' or 'No' only!")
+            question()
+    #the statement below prints out incase the user does not want to see the map
     elif ask == "No":
-        print("You can choose to view the map later in the game!")
+        print("\nYou can choose to view the map later in the game!")
+    #the following statement prints if the user types an invalid input
     else:
-        print("Please print out either 'Yes' or 'No' only!\n")
+        print("\nPlease print out either 'Yes' or 'No' only!")
         question()

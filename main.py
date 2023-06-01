@@ -1,9 +1,9 @@
 ###############################################################################
 #Stuti_Home_Adventure
 #CS 30
-#May 18, 2023
+#June 1, 2023
 #Stuti Sapru
-#Version 005
+#Version 006
 ###############################################################################
 '''
 A simple game using a map and items in the rooms of the map
@@ -27,6 +27,7 @@ import Inventory
 #tracks their location
 import Movement
 
+
 #the initial instructions of the game are printed first and do not loop
 #throughout the duration of the game
 print("Please type all answers exactly as given in the question. \nFor "
@@ -37,17 +38,19 @@ Map.question()
 #this allows the code to loop forver until the user decides to quit and it
 #also prints the location of the user with every loop
 while Movement.loop == True:
-  #this statement prints what room the user is in
-  print(f"\nYou are in room: {Map.map[Movement.row][Movement.column]}")
-  #this loop prints the description of the room the user is in
-  for key in Map.map_rooms:
-    if key == Map.map[Movement.row][Movement.column]:
-      for des in Map.map_rooms[key]:
-        print(f"{Map.map_rooms[key][des]}")
-  #this call the function that controls the user's inventory from
-  #another module
-  Inventory.get_items()
-  #this call the function that controls the user's movement from another
-  #module
-  Movement.move()
-  Map.question()
+    #this statement prints what room the user is in
+    print(f"\nYou are in room: {Map.map[Movement.row][Movement.column]}")
+    #this loop prints the description of the room the user is in
+    for key in Map.map_rooms:
+        if key == Map.map[Movement.row][Movement.column]:
+            for des in Map.map_rooms[key]:
+                print(f"{Map.map_rooms[key][des]}")
+    #this call the function that controls the user's inventory from
+    #another module
+    Inventory.get_items()
+    #this call the function that controls the user's movement from another
+    #module
+    Movement.move()
+    #this call the function that controls the user's movement from another
+    #module
+    Map.question()

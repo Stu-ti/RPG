@@ -1,9 +1,9 @@
 +----------+-----------+----------+----------+
-|  Closet  |   Office  | Washroom |   Sauna  |
+| closet   | office    | washroom | sauna    |
 +----------+-----------+----------+----------+
-| Entrance |   Foyer   |  Stairs  | Bedroom1 |
+| entrance | foyer     | stairs   | bedroom1 |
 +----------+-----------+----------+----------+
-| Bedroom  | Washroom1 | Bedroom2 | Theatre  |
+| bedroom  | washroom1 | bedroom2 | theatre  |
 +----------+-----------+----------+----------+
-| Sunroom  |  Kitchen  |  Dining  |   Gym    |
+| sunroom  | kitchen   | dining   | gym      |
 +----------+-----------+----------+----------+

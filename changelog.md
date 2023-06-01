@@ -67,3 +67,15 @@ updated - version history
 updated - file name
 updated - date the file was submitted
 updated - comments on the main program
+
+v6.0
+Name: Stuti_Home_Adventure
+fixed - try-except-else-finally code
+fixede - external file handling
+added - more comments for a clearer code
+fixed - formatting errors
+fixed - errors in the code
+updated - change log
+updated - version history
+updated - date the file was submitted
+updated - comments on the main program
